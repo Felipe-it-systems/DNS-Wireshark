@@ -122,13 +122,7 @@ Esto confirma que las peticiones del cliente pasan por el servidor, que las resu
 
 ## 6. Camino de una petición DNS
 
-```mermaid
-flowchart LR
-    A[Cliente<br>192.168.10.88] -->|1. consulta UDP 53| B[Servidor dnsmasq<br>192.168.10.1]
-    B -->|2. reenvía| C[DNS de Internet<br>8.8.8.8 / 1.1.1.1]
-    C -->|3. respuesta con la IP| B
-    B -->|4. respuesta| A
-```
+![camino de una petición DNS](img/08-camino-dns.png)
 
 ## 7. DNS sobre HTTPS (DoH)
 
